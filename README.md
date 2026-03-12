@@ -1,1 +1,3 @@
-# Grupo_Fabian_Arto_Set_Ramirez
+# Grupo_Programacion2
+Integrante:
+Fabian_Arto_Set_Ramirez
