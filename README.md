@@ -1,4 +1,4 @@
 # Grupo_Programacion2
 Integrante:
-Fabian_Arto_Set_Ramirez_Alamiro_Aravena
+Fabian_Arto_Set_Ramirez_Alamiro_Aravena_Jorge_Araneda
 
