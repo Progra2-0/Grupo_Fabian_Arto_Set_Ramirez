@@ -1,6 +1,7 @@
 import numpy as np
 
 def cargar_experimentos():
+    #Se crea un diccionario de diccionarios con los datos extraídos de las Tablas 6, 7 y 8 del paper de referencia.
     experimentos = {
         # Tabla6
         "exp1":{"politica": "PPO","ambiente": "real","ruta": "simple","ISE": 434.99,"IAE": 135.93,"ITSE": 6932.79,"ITAE": 2601.61,"tiempo_s": None,"pasos": None,"reward_medio": None
@@ -33,17 +34,23 @@ def cargar_experimentos():
     return experimentos
 
 def generar_trayectoria_ideal(waypoints,puntos_por_segmento=100):
+    # Se recibe una lista de puntos (waypoints) y genera arreglos de coordenadas x e y interpoladas para crear la trayectoria ideal continua.
     x_ideal = []
     y_ideal = []
     for i in range(len(waypoints)-1):
         x_ideal.extend(np.linspace(waypoints[i][0], waypoints[i+1][0], puntos_por_segmento))
         y_ideal.extend(np.linspace(waypoints[i][1], waypoints[i+1][1], puntos_por_segmento))
+    # Se retornan las listas convertidas a arreglos de numpy para hacer mas facil el cálculo mas adelante
     return np.array(x_ideal),np.array(y_ideal)
 
 def simular_lidar(n_sectores=36,d_min=0.5,d_max=30.0):
+    # Se crea un arreglo de ángulos de 0 a 360 grados
     angulos_deg = np.linspace(0,360,n_sectores)
+    # Se generan distancias aleatorias dentro del rango del sensor (0.5m a 30m)
     distancia = np.random.uniform(d_min,d_max,n_sectores)
+    # Se simula un obstáculo cercano: Modificamos 4 sectores (del 5 al 8) para que tengan una distancia corta (entre 0.5 y 2.0 metros)
     distancia[5:9] = np.random.uniform(0.5,2.0,4)
+    #Se normalizan los datos de distancia para que queden en un rango de [0.0 a 1.0]
     distancia_normalizada = (distancia-d_min)/(d_max-d_min)
     return angulos_deg,distancia,distancia_normalizada
 
