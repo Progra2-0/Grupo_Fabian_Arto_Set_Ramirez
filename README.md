@@ -11,9 +11,9 @@ En este repositorio se irán publicando las actividades realizadas en laboratori
 
 ## 📂 Contenido
 
-- [Laboratorios](./laboratorios/README.md)
-- [Tareas](./tareas/README.md)
-- [Actividades Prácticas](./practicas/README.md)
+- [Laboratorios](./Laboratorios/README.md)
+- [Tareas](./Tareas/README.md)
+- [Actividades Prácticas](./Practicas/README.md)
 
 ---
 
