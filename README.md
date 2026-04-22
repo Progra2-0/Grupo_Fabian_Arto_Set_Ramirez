@@ -13,7 +13,7 @@ En este repositorio se irán publicando las actividades realizadas en laboratori
 
 - [Laboratorios](./Laboratorios)
 - [Tareas](./Tareas)
-- [Actividades Prácticas](./Actividades Prácticas)
+- [Actividades Prácticas](./Actividades_Prácticas)
 
 ---
 
