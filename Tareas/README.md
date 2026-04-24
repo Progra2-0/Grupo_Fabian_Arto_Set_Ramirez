@@ -1,9 +1,20 @@
-# 📝 Tareas del Curso
+# 📝 Registro de Tareas - EIE434
 
-En esta sección se irán publicando las tareas a medida que avance el curso.
+Este apartado está dedicado exclusivamente a las tareas de la asignatura. Conforme avancemos en el curso, iremos actualizando esta lista con los enlaces a cada nueva entrega.
 
 ---
 
-- [Ir a Tarea 1](./Tarea%201)
+## 📑 Listado de Tareas
 
-🔙 [Volver al inicio del curso](../README.md)
+| ID | Tarea | Descripción Principal | Lenguaje | Estado | Enlace |
+| :---: | :--- | :--- | :---: | :---: | :---: |
+| **01** | **Tarea 1** | Sistema de Análisis Robótico: Evaluación de políticas de navegación (PPO vs PPO-Mask) y métricas de control. | ![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white) | ✅ Finalizada | [📂 Ver Directorio](./Tarea%201) |
+
+---
+
+### 💡 Notas de Navegación
+* Cada enlace de la tabla te llevará a la carpeta específica de la tarea, donde encontrarás el código, los resultados y las instrucciones de ejecución.
+* Para ver los laboratorios o actividades prácticas, regresa al menú principal.
+
+---
+[🔙 Volver al inicio del repositorio](../README.md)
