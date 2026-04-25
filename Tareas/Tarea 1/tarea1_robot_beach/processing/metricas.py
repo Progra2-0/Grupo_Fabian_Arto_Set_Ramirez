@@ -33,4 +33,4 @@ def calcular_todas_las_metricas(errores,dt):
 # Calcula la mejora porcentual entre PPO y PPO-Mask.
 # cuánto mejoró PPO-Mask respecto a PPO en porcentaje.
 def calcular_mejora(valor_ppo,valor_mask):
-    return(round((valor_ppo-valor_mask)/valor_ppo*100))
+    return(round((valor_ppo-valor_mask)/valor_ppo*100, 2))
