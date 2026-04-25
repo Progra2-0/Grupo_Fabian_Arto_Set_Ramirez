@@ -50,3 +50,32 @@ Tarea l/
 │   ├── __init__.py
 │   └── graficos.py         # Generación de figuras con Matplotlib
 └── resultados_graficos/    # Directorio destino para guardar los .png
+```
+
+## 📊 4. Resultados Obtenidos
+
+A partir de la ejecución de nuestro código, obtuvimos las siguientes visualizaciones, las cuales se almacenan automáticamente en el directorio `/resultados_graficos`:
+
+### 📡 Simulación Sensorial (LiDAR)
+
+Muestra la percepción del entorno mediante el sensor RPLIDAR S2, fundamental para la navegación en entornos costeros.
+
+<div align="center">
+  <img src="./resultados_graficos/mapa_lidar.png" width="600" alt="Mapa LiDAR de 36 sectores">
+</div>
+
+### 📍 Comparación de Trayectorias de Navegación
+
+En esta sección se contrastan las rutas ejecutadas por el robot para los dos escenarios de prueba definidos en el proyecto.
+
+| Trayectoria Triangular | Trayectoria Cuadrada |
+| :---: | :---: |
+| <img src="./resultados_graficos/trayectorias_triangulo.png" width="400" alt="Ruta triangular"> | <img src="./resultados_graficos/trayectorias_cuadrado.png" width="400" alt="Ruta cuadrada"> |
+
+### 📈 Evaluación de Desempeño (Métricas de Error)
+
+Gráfico comparativo de los índices **ISE, IAE, ITSE e ITAE** para las políticas PPO y PPO-Mask, permitiendo visualizar la reducción de error mencionada en el paper (16.6% en ISE).
+
+<div align="center">
+  <img src="./resultados_graficos/metricas_real_simple.png" width="800" alt="Comparativa de métricas PPO vs PPO-Mask">
+</div>
