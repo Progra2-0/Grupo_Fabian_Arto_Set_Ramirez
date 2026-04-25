@@ -35,7 +35,7 @@ En proyectos de ingeniería, dividir el código es fundamental para la mantenibi
 El código está orquestado por `main.py` y respeta estrictamente la arquitectura modular obligatoria definida en el enunciado, integrando el informe teórico requerido:
 
 ```text
-tareal_robot_beach/
+Tarea l/
 ├── main.py                 # Punto de entrada: orquesta, no calcula
 ├── README.md               # Documentación: modularidad y dependencias
 ├── Analisis de paper.pdf   # Informe teórico (Parte 1)
