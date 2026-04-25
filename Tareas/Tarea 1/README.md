@@ -5,7 +5,7 @@ Este proyecto implementa un sistema modular en Python para analizar y visualizar
 ---
 
 ## 📚 1. Análisis del Paper (Cuestionario Teórico)
-*(Nota: La versión oficial y evaluada de este cuestionario se encuentra en el archivo [Analisis de paper.pdf](./Analisis%20del%20paper.pdf) adjunto en este repositorio).*
+*(Nota: La versión oficial y evaluada de este cuestionario se encuentra en el archivo [Analisis del paper.pdf](./Analisis%20del%20paper.pdf) adjunto en este repositorio).*
 
 **1. ¿Qué problema del mundo real motiva el desarrollo de este trabajo?**
 > *Respuesta:* La motivación principal que tiene este trabajo es poder resolver la crisis medioambiental que generan los residuos plásticos en océanos y zonas costeras. Las soluciones que se presentan a este problema no son tan efectivas como se necesita, ya que los métodos de limpieza manuales son poco eficientes y necesitan mucha mano de obra, como también que los robots industriales existentes suelen ser máquinas grandes que pesan varias toneladas, lo que las hace costosas, gastan demasiada energía y difíciles de utilizar en entornos costeros diversos. Además, existen problemas con respecto a las tecnologías utilizadas en las plataformas robóticas además del costo, los cuales son la baja efectividad en suelo de grano como la arena y la interferencia de la luz solar en los sensores, por lo que se buscan plataformas robóticas más ligeras, económicas y eficientes que utilicen algoritmos como el DRL.
@@ -25,7 +25,7 @@ Este proyecto implementa un sistema modular en Python para analizar y visualizar
 
 En proyectos de ingeniería, dividir el código es fundamental para la mantenibilidad y escalabilidad. Basándonos en la investigación solicitada, aplicamos los siguientes conceptos:
 
-* **Módulos:** Cualquier archivo `.py` que contiene funciones, clases o variables enfocadas en una tarea específica para ser reutilizadas. En este proyecto, archivos como `metricas.py` y `cinematica.py` actúan como módulos independientes.
+* **Módulos:** Cualquier archivo `.py` que contiene funciones, clases o variables enfocadas en una tarea específica para ser reutilizadas. En este proyecto, archivos como `metricas.py` y `cinematicas.py` actúan como módulos independientes.
 * **Paquetes y `__init__.py`:** Un paquete es un directorio que agrupa módulos relacionados. El archivo `__init__.py` es indispensable para que Python reconozca estas carpetas (`data`, `processing`, `visualization`) como paquetes importables.
 * **La sentencia `import`:** Es la herramienta que nos permite conectar la lógica distribuida en los paquetes con el archivo orquestador (`main.py`), permitiendo un flujo de trabajo organizado y limpio.
 
@@ -37,22 +37,73 @@ El código está orquestado por `main.py` y respeta estrictamente la arquitectur
 ```text
 tarea1_robot_beach/
 ├── main.py                 # Punto de entrada: orquesta, no calcula
-├── README.md               # Documentación: modularidad y dependencias
-├── Analisis de paper.pdf   # Informe teórico (Parte 1)
 ├── data/                   # Datos del paper y generación de señales
 │   ├── __init__.py
 │   └── robot_data.py       
 ├── processing/             # Motor matemático y físico
 │   ├── __init__.py
 │   ├── metricas.py         # Cálculo de IAE, ISE, ITAE, ITSE
-│   └── cinematica.py       # Modelo cinemático del robot
+│   └── cinematicas.py       # Modelo cinemático del robot
 ├── visualization/          # Comunicación visual
 │   ├── __init__.py
 │   └── graficos.py         # Generación de figuras con Matplotlib
 └── resultados_graficos/    # Directorio destino para guardar los .png
 ```
+---
 
-## 📊 4. Resultados Obtenidos
+## ⚙️ 4. Dependencias y Ejecución
+
+### Requisitos
+- Python 3.8+
+- NumPy
+- Matplotlib
+
+### Instalación
+```bash
+pip install numpy matplotlib
+```
+
+### Ejecución
+Desde la carpeta raíz del proyecto:
+```bash
+python main.py
+```
+
+Al ejecutarse, el script generará automáticamente la carpeta `resultados_graficos/` 
+con las cuatro figuras correspondientes a cada paso del pipeline.
+
+---
+
+## 🖥️ 5. Salida de Consola
+
+Al ejecutar `python main.py` se obtiene la siguiente salida:
+
+```text
+--- INICIANDO SISTEMA DE EVALUACIÓN: PLAYABOT 2026 ---
+
+[VALIDACIÓN] Verificando modelo físico del robot...
+ > Pose inicial: (0,0,0) -> Nueva Pose: (0.05, 0.00, 0.01 rad)
+ > Distancia restante al objetivo (1,1): 1.38m
+
+[SENSOR] Generando lectura de 36 sectores...
+
+[NAVEGACIÓN] Evaluando seguimiento de rutas...
+
+[MÉTRICAS] Resultados PPO en Ruta Cuadrada:
+ > ISE: 1.73
+ > IAE: 7.4
+ > ITSE: 33.86
+ > ITAE: 144.92
+
+--- PROCESO FINALIZADO ---
+Revise la carpeta 'resultados_graficos' para ver los reportes visuales.
+```
+
+> ⚠️ **Nota:** Las métricas pueden variar ligeramente entre ejecuciones porque las trayectorias se generan con ruido aleatorio (`np.random.normal`). La validación cinemática (Pose y distancia) sí es determinista y debe coincidir exactamente con los valores de referencia del enunciado.
+
+---
+
+## 📊 6. Resultados Obtenidos
 
 A partir de la ejecución de nuestro código, obtuvimos las siguientes visualizaciones, las cuales se almacenan automáticamente en el directorio `/resultados_graficos`:
 
