@@ -8,7 +8,7 @@ Este apartado está dedicado exclusivamente a las tareas de la asignatura. Confo
 
 | ID | Tarea | Descripción Principal | Lenguaje | Estado | Enlace |
 | :---: | :--- | :--- | :---: | :---: | :---: |
-| **01** | **Tarea 1** | Sistema de Análisis Robótico: Evaluación de políticas de navegación (PPO vs PPO-Mask) y métricas de control. | ![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white) | ✅ Finalizada | [📂 Ver Directorio](./Tarea%201) |
+| **01** | **Tarea 1** | Sistema de Análisis Robótico: Evaluación de políticas de navegación (PPO vs PPO-Mask) y métricas de control. | ![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white) | ✅ Finalizada | [📂 Ver Directorio](./tarea1_robot_beach) |
 
 ---
 
