@@ -5,7 +5,7 @@ Este proyecto implementa un sistema modular en Python para analizar y visualizar
 ---
 
 ## 📚 1. Análisis del Paper (Cuestionario Teórico)
-*(Nota: La versión oficial y evaluada de este cuestionario se encuentra en el archivo [Analisis de paper.pdf](./Analisis%20de%20paper.pdf) adjunto en este repositorio).*
+*(Nota: La versión oficial y evaluada de este cuestionario se encuentra en el archivo [Analisis de paper.pdf](./Analisis%20del%20paper.pdf) adjunto en este repositorio).*
 
 **1. ¿Qué problema del mundo real motiva el desarrollo de este trabajo?**
 > *Respuesta:* [La motivación principal que tiene este trabajo es poder resolver la crisis medioambiental que generan los residuos plásticos en océanos y zonas costeras. Las soluciones que se presentan a este problema no son tan efectivas como se necesita, ya que los métodos de limpieza manuales son poco eficientes y necesitan mucha mano de obra, como también que los robots industriales existentes suelen ser máquinas grandes que pesan varias toneladas, lo que las hace costosas, gastan demasiada energía y difíciles de utilizar en entornos costeros diversos. Además, existen problemas con respecto a las tecnologías utilizadas en las plataformas robóticas además del costo, los cuales son la baja efectividad en suelo de grano como la arena y la interferencia de la luz solar en los sensores, por lo que se buscan plataformas robóticas más ligeras, económicas y eficientes que utilicen algoritmos como el DRL.]
