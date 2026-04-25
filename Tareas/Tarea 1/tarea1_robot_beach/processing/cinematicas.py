@@ -6,8 +6,8 @@ def calcular_movimiento(x,y,theta,v,omega,dt=0.1):
     v = np.clip(v,-0.8,0.8)
     omega = np.clip(omega,-0.6,0.6)
     # Nueva posición = Posición actual + avance en ese eje
-    x_nuevo = x*v*np.cos(theta)*dt
-    y_nuevo = y*v*np.sin(theta)*dt
+    x_nuevo = x + v * np.cos(theta)*dt
+    y_nuevo = y + v * np.sin(theta)*dt
     # Nueva orientación = Orientación actual + giro
     theta_nuevo = theta + omega*dt
     return x_nuevo,y_nuevo,theta_nuevo
