@@ -35,7 +35,7 @@ En proyectos de ingeniería, dividir el código es fundamental para la mantenibi
 El código está orquestado por `main.py` y respeta estrictamente la arquitectura modular obligatoria definida en el enunciado, integrando el informe teórico requerido:
 
 ```text
-Tarea l/
+tarea1_robot_beach/
 ├── main.py                 # Punto de entrada: orquesta, no calcula
 ├── README.md               # Documentación: modularidad y dependencias
 ├── Analisis de paper.pdf   # Informe teórico (Parte 1)
@@ -61,7 +61,7 @@ A partir de la ejecución de nuestro código, obtuvimos las siguientes visualiza
 Muestra la percepción del entorno mediante el sensor RPLIDAR S2, fundamental para la navegación en entornos costeros.
 
 <div align="center">
-  <img src="./resultados_graficos/mapa_lidar.png" width="600" alt="Mapa LiDAR de 36 sectores">
+  <img src="./tarea1_robot_beach/resultados_graficos/mapa_lidar.png" width="600" alt="Mapa LiDAR de 36 sectores">
 </div>
 
 ### 📍 Comparación de Trayectorias de Navegación
@@ -70,12 +70,12 @@ En esta sección se contrastan las rutas ejecutadas por el robot para los dos es
 
 | Trayectoria Triangular | Trayectoria Cuadrada |
 | :---: | :---: |
-| <img src="./resultados_graficos/trayectorias_triangulo.png" width="400" alt="Ruta triangular"> | <img src="./resultados_graficos/trayectorias_cuadrado.png" width="400" alt="Ruta cuadrada"> |
+| <img src="./tarea1_robot_beach/resultados_graficos/trayectorias_triangulo.png" width="400" alt="Ruta triangular"> | <img src="./tarea1_robot_beach/resultados_graficos/trayectorias_cuadrado.png" width="400" alt="Ruta cuadrada"> |
 
 ### 📈 Evaluación de Desempeño (Métricas de Error)
 
 Gráfico comparativo de los índices **ISE, IAE, ITSE e ITAE** para las políticas PPO y PPO-Mask, permitiendo visualizar la reducción de error mencionada en el paper (16.6% en ISE).
 
 <div align="center">
-  <img src="./resultados_graficos/metricas_real_simple.png" width="800" alt="Comparativa de métricas PPO vs PPO-Mask">
+  <img src="./tarea1_robot_beach/resultados_graficos/metricas_real_simple.png" width="800" alt="Comparativa de métricas PPO vs PPO-Mask">
 </div>
