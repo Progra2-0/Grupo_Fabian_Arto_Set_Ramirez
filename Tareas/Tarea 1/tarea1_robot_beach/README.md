@@ -31,12 +31,15 @@ En proyectos de ingeniería, dividir el código es fundamental para la mantenibi
 
 ---
 
-## 📁 3. Estructura del Directorio
+## 📁 3. Estructura de la Entrega
+
 El código está orquestado por `main.py` y respeta estrictamente la arquitectura modular obligatoria definida en el enunciado, integrando el informe teórico requerido:
 
 ```text
 tarea1_robot_beach/
 ├── main.py                 # Punto de entrada: orquesta, no calcula
+├── README.md                   # Este archivo
+├── Analisis del paper.pdf      # Informe teórico 
 ├── data/                   # Datos del paper y generación de señales
 │   ├── __init__.py
 │   └── robot_data.py       
@@ -112,7 +115,7 @@ A partir de la ejecución de nuestro código, obtuvimos las siguientes visualiza
 Muestra la percepción del entorno mediante el sensor RPLIDAR S2, fundamental para la navegación en entornos costeros.
 
 <div align="center">
-  <img src="./tarea1_robot_beach/resultados_graficos/mapa_lidar.png" width="600" alt="Mapa LiDAR de 36 sectores">
+  <img src="./resultados_graficos/mapa_lidar.png" width="600" alt="Mapa LiDAR de 36 sectores">
 </div>
 
 ### 📍 Comparación de Trayectorias de Navegación
@@ -121,12 +124,12 @@ En esta sección se contrastan las rutas ejecutadas por el robot para los dos es
 
 | Trayectoria Triangular | Trayectoria Cuadrada |
 | :---: | :---: |
-| <img src="./tarea1_robot_beach/resultados_graficos/trayectorias_triangulo.png" width="400" alt="Ruta triangular"> | <img src="./tarea1_robot_beach/resultados_graficos/trayectorias_cuadrado.png" width="400" alt="Ruta cuadrada"> |
+| <img src="./resultados_graficos/trayectorias_triangulo.png" width="400" alt="Ruta triangular"> | <img src="./resultados_graficos/trayectorias_cuadrado.png" width="400" alt="Ruta cuadrada"> |
 
 ### 📈 Evaluación de Desempeño (Métricas de Error)
 
 Gráfico comparativo de los índices **ISE, IAE, ITSE e ITAE** para las políticas PPO y PPO-Mask, permitiendo visualizar la reducción de error mencionada en el paper (16.6% en ISE).
 
 <div align="center">
-  <img src="./tarea1_robot_beach/resultados_graficos/metricas_real_simple.png" width="800" alt="Comparativa de métricas PPO vs PPO-Mask">
+  <img src="./resultados_graficos/metricas_real_simple.png" width="800" alt="Comparativa de métricas PPO vs PPO-Mask">
 </div>
