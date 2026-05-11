@@ -1,0 +1,68 @@
+//programacion en c 
+1)
+#include <stdio.h>
+
+int main() {
+
+    int entero = 1;
+    float flotante = 1.2;
+    char character = 'A';
+
+    printf("Edad: %d\n", entero);
+    printf("Altura: %f\n", flotante);
+    printf("Letra: %c\n", character);
+
+    return 0;
+}
+
+
+2)
+
+#include <stdio.h>
+
+int main() {
+
+ int num ;
+ printf (" Ingrese un numero : ") ;
+ scanf ("%d", & num ) ;
+ 
+ int num2 ; 
+ printf("Ingrese un numero(2)") ;
+ scanf ("%d", & num2);
+ 
+ printf (" Suma : %d\n", num + num2 ) ;
+ printf (" Resta : %d\n", num - num2 ) ;
+ printf (" Multiplicacion: %d\n", num * num2 ) ;
+ printf (" Division: %d\n", num / num2 ) ;
+ printf ("Modulo : %d\n", num % num2 ) ;
+
+
+    return 0;
+}
+
+
+
+3) 
+
+
+#include <stdio.h>
+
+int main() {
+
+ int base, altura, area, perimetro ;
+ printf (" Ingrese la base : ") ;
+ scanf ("%d", & base ) ;
+ 
+ printf (" Ingrese la altura : ") ;
+ scanf ("%d", & altura ) ;
+ 
+ area = base * altura ;
+ perimetro = 2 * base + 2 * altura ;
+ 
+ printf("El area es: %d\n", area);
+ printf("E perimetro es: %d\n", perimetro);
+
+ 
+
+    return 0;
+}
