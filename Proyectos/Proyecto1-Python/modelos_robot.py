@@ -36,3 +36,31 @@ class RobotTresRuedas(RobotBase):
     def limpiar(self):
         self._reducir_bateria(2.0)
         self._recolectar_basura(random.uniform(0.5, 1.5))
+
+       
+# Creación de la clase hija RobotOruga,
+# contiene el método único ajustar_tension() y los dos métodos heredados mencionados anteriormente mover() y limpiar().
+class RobotOruga(RobotBase):
+    # En este caso se requiere que desde el main se ingrese nombre, la tensión de la oruga.
+    def __init__(self,nombre:str,tension_oruga:float):
+        # Entrega los mismos atributos de la clase hija RobotTresRuedas, solo que en este caso se establece el valor de la capacidad de carga en 50.0 .
+        super().__init__(nombre,50.0)
+        self.tension_oruga = tension_oruga
+    # Con todo lo anterior se crea un objeto con un cierto nombre, una cierta capacidad de carga,
+    # una cierta tensión de oruga y con sus posiciones iniciales (x,y,yaw).
+
+    # Definimos método único ajustar_tension(), imprime en pantalla las tensiones de las orugas.
+    def ajustar_tension(self):
+        print(f"[{self.get_nombre()}] Ajustando tension de las orugas al {self.tension_oruga}%.")
+
+    #  Definimos método mover()a través de herencia para usar el método de la clase padre step(0.3,0.8).
+    def mover(self):
+        reward,llegamos=super().step(0.3, 0.8)
+        return reward,llegamos
+
+    # Definimos método limpiar() a través de herencia para usar dos métodos de la clase padre _reducir_bateria(4.5) 
+    # y _recolectar_basura(numero random entre 2.0 y 4.0).
+
+    def limpiar(self):
+        self._reducir_bateria(4.5)
+        self._recolectar_basura(random.uniform(2.0, 4.0))
