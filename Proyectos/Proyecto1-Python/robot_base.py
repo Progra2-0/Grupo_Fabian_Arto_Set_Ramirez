@@ -47,7 +47,7 @@ class RobotBase:
         self.__pos_y = y
         self.__yaw = yaw
 
-    def _reducir_bateria(self, cantidad): # Resta energia, se asegura de que el porcentaje nunca caiga por debajo de cero.
+    def _reducir_bateria(self, cantidad): # Resta energia y se asegura de que el porcentaje nunca baje de cero.
         self.__bateria -= cantidad
         if self.__bateria < 0.0:
             self.__bateria = 0.0
