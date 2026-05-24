@@ -64,3 +64,38 @@ class RobotOruga(RobotBase):
     def limpiar(self):
         self._reducir_bateria(4.5)
         self._recolectar_basura(random.uniform(2.0, 4.0))
+
+    
+# Creación de la clase hija RobotDron
+# contiene el método único despegar() y los dos métodos heredados mencionados anteriormente mover() y limpiar().
+class RobotDron(RobotBase):
+    # En este caso se requiere que desde el main se ingrese nombre, altura máxima.
+    def __init__(self,nombre:str,altura_maxima:float):
+        # Entrega los mismos atributos de la clase hija RobotTresRuedas, solo que en este caso se establece el valor de la capacidad de carga en 5.0 .
+        super().__init__(nombre,5.0)
+        self.altura_maxima =altura_maxima
+        # Se establece un atributo que indica si está en vuelo o no y según su estado va a realizar unas funciones o otras, en sus métodos.
+        self.en_vuelo=False
+
+    # Definimos método despegar, imprime la altura máxima y cambia el estado de vuelo a true (en_vuelo=True).
+    def despegar(self):
+        self.en_vuelo=True
+        print(f"[{self.get_nombre()}] Despegando hasta {self.altura_maxima} metros de altura.")
+    
+    #  Definimos método mover() a través de herencia para usar el método de la clase padre step(2.5,1.0) solo llama al método padre si está en vuelo(en_vuelo=True).
+    def mover(self):
+
+        if self.en_vuelo:
+            reward,llegamos=super().step(2.5, 1.0)
+        else:
+            reward,llegamos=0.0,False    
+
+        return reward,llegamos
+    
+    # Definimos método limpiar() a través de herencia para usar dos métodos de la clase padre _reducir_bateria(3.0) 
+    # y _recolectar_basura(numero random entre 0.1 y 0.4), solo llama a los métodos del padre si está en vuelo(en_vuelo=True).
+    def limpiar(self):
+        if self.en_vuelo:
+            self._reducir_bateria(3.0)
+            self._recolectar_basura(random.uniform(0.1, 0.4))
+    
