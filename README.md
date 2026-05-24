@@ -14,7 +14,7 @@ En este repositorio se irán publicando las actividades realizadas en laboratori
 - [Laboratorios](./Laboratorios)
 - [Tareas](./Tareas)
 - [Actividades Prácticas](./Actividades_Prácticas)
-
+- [Proyectos](./Proyectos)
 ---
 
 📅 Primer semestre 2026
