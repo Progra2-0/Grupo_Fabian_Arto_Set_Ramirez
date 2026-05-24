@@ -1,6 +1,6 @@
 import numpy as np
 
-def comparar_rendimiento(datos): 
+def comparar_rendimiento(datos: list) -> dict:
 
     arr = np.array(datos)
     nombres = np.unique(arr[:, 1])
