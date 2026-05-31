@@ -40,4 +40,4 @@ tarea_mundial_poo/
 
 ## 📄 3. Informe
 
-El archivo `Informe_Portugal_campeon.pdf` contiene la justificación detallada de por qué Portugal sería el campeón del Mundo 2026, analizando cada línea del equipo (portero, defensa, mediocampo y ataque).
+El archivo  [Informe_Portugal_campeon.pdf](./Informe_Portugal_campeon.pdf) contiene la justificación detallada de por qué Portugal sería el campeón del Mundo 2026, analizando cada línea del equipo (portero, defensa, mediocampo y ataque).
