@@ -1,7 +1,7 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
-#include <time.h>
+#include <stdio.h>  // Libreria de entrada y salida
+#include <stdlib.h> // Libreria con numeros aleatorios
+#include <stdbool.h> // Libreria para poder usar los Booleanos
+#include <time.h>  // Libreria para obtener el tiempo para las semillas del numero aleatorio
 
 // ============================================================
 // PARTE 1 - Definicion de la estructura del eslabon
@@ -16,24 +16,24 @@ typedef struct {
 // PARTE 2 - Funcion para generar la posicion inicial aleatoria
 
 void generarEslabon(Eslabon *e, int id) {
-    (*e).id = id;
-    (*e).x = (float)(rand() % 361);   
-    (*e).y = (float)(rand() % 361);   
+    (*e).id = id;                     // Asigna el identificador recibido
+    (*e).x = (float)(rand() % 361);   // Posicion X aleatoria (0 a 360)
+    (*e).y = (float)(rand() % 361);   // Posicion Y aleatoria (0 a 360)
 }
 
 // ============================================================
 // PARTE 3 - Funcion para simular el avance hacia auto-home
 
 bool avance_eslabon(Eslabon *e) {
-    while ((*e).x > 0 || (*e).y > 0) {
+    while ((*e).x > 0 || (*e).y > 0) {// Mientras no haya llegado a (0,0)
         if ((*e).x > 0) {
-            (*e).x = (*e).x - 1;
+            (*e).x = (*e).x - 1;// Baja la posicion X
         }
         if ((*e).y > 0) {
-            (*e).y = (*e).y - 1;
+            (*e).y = (*e).y - 1;// Baja la posicion y
         }
     }
-    return true;
+    return true;// X e Y ya son 0: auto-home logrado
 }
 
 // ============================================================
